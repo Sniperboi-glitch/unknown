@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store • Craftheaven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #282c35;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1c1f2a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        #social-links {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        #social-links img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        #navbar {
+            background-color: #1c1f2a;
+            overflow: hidden;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        #navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #282c35;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #navbar a:hover {
+            background-color: #333944;
+        }
+
+        #navbar a.active {
+            background-color: #00aa77;
+            color: white;
+        }
+
+        #store {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .product {
+            border: 2px solid #3498db;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #2c303d;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product h2 {
+            color: #fff;
+        }
+
+        .product p {
+            color: #bbb;
+        }
+
+        .buy-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #2674a5;
+        }
+
+        #footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #footer a {
+            color: #4ca8af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #footer a:hover {
+            color: #fff;
+        }
+
+        #footer-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/broken-noise.png');
+            padding: 10px 0;
+        }
+
+        #social-widget {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #social-widget a {
+            margin: 0 15px;
+            color: #4ca8af;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #social-widget a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><img src="https://cdn.discordapp.com/attachments/1144628059627065365/1195857326482141274/20240113_193249_2_1.png?ex=65b583ec&is=65a30eec&hm=fafd5e94e2337d5507fdf860c4dbc059bce569e28be3ab3a5d048a07f63e90ed&"</h1>
+        <div id="social-links">
+            <a href="https://youtube.craftheaven.xyz" target="_blank"><img src="https://cdn.discordapp.com/attachments/1144673048344145960/1195854167412064336/icons8-youtube-48.png?ex=65b580fb&is=65a30bfb&hm=94edeac3e113fe0e121a8065f52fb68873fdb71b7757f2878ae086ac2eb0c619&" alt="Youtube"></a>
+            <a href="https://discord.craftheaven.xyz" target="_blank"><img src="https://cdn.discordapp.com/attachments/1144673048344145960/1195854167600791607/icons8-discord-new-48.png?ex=65b580fb&is=65a30bfb&hm=1ecb259f36878797267a209f0ddaf575039b82fcc7e49578b19855a4562188ad&" alt="Discord"></a>
+            <a href="mailto:support@craftheaven.xyz" target="_blank"><img src="https://cdn.discordapp.com/attachments/1144673048344145960/1195854167219130388/icons8-request-service-48.png?ex=65b580fb&is=65a30bfb&hm=9d16c90edd89662b75868adb597e3de107d8cd0ad24b406b98e9f934b9999f62&" alt="Support"></a>
+        </div>
+    </header>
+
+    <div id="navbar">
+        <a href="index.html" class="link">Home</a>
+        <a href="vote.html" class="link">Vote</a>
+        <a href="ranks.html" class="active">Store</a>
+        <a href="events.html" class="link">Events</a>
+        <a href="staff.html" class="link">Staff</a>
+    </div>
+
+
+    <!-- Store Section -->
+    <div id="store">
+
+        <!-- Product: Heaven -->
+        <div class="product">
+            <h2>Heaven</h2>
+            <i class="fas fa-crown fa-3x"></i>
+            <p>Unlock special features with Rank 1.</p>
+            <p>$5.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+        <!-- Product: Rank 2 -->
+        <div class="product">
+            <h2>Ultimate</h2>
+            <i class="fas fa-crown fa-3x"></i>
+            <p>Access exclusive content with Rank 2.</p>
+            <p>$10.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+        <!-- Product: Rank 3 -->
+        <div class="product">
+            <h2>Legends</h2>
+            <i class="fas fa-crown fa-3x"></i>
+            <p>Access exclusive content with Rank 2.</p>
+            <p>$10.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+        <!-- Product: Rank 4 -->
+        <div class="product">
+            <h2>Elite</h2>
+            <i class="fas fa-crown fa-3x"></i>
+            <p>Access exclusive content with Rank 2.</p>
+            <p>$10.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+        <!-- Product: Rank 5 -->
+        <div class="product">
+            <h2>Mvp</h2>
+            <i class="fas fa-crown fa-3x"></i>
+            <p>Access exclusive content with Rank 2.</p>
+            <p>$10.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+
+        <!-- Product: Rank 6 -->
+        <div class="product">
+            <h2>Vip</h2>
+            <i class="fas fa-crown fa-3x"></i>
+            <p>Enjoy VIP perks with Rank 3.</p>
+            <p>$15.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+        <!-- Product: Key A -->
+        <div class="product">
+            <h2>Key A</h2>
+            <i class="fas fa-key fa-3x"></i>
+            <p>Unlock a mystery crate with Key A.</p>
+            <p>$2.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+        <!-- Product: Key B -->
+        <div class="product">
+            <h2>Key B</h2>
+            <i class="fas fa-key fa-3x"></i>
+            <p>Discover rare items with Key B.</p>
+            <p>$3.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+        <!-- Product: Key C -->
+        <div class="product">
+            <h2>Key C</h2>
+            <i class="fas fa-key fa-3x"></i>
+            <p>Unlock the ultimate loot with Key C.</p>
+            <p>$5.00</p>
+            <button class="buy-button" onclick="redirectToDiscord()">Buy Now</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Function to scroll smoothly to a target element
+        function smoothScroll(targetId) {
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Redirect to Discord
+        function redirectToDiscord() {
+            window.location.href = "https://discord.craftheaven.xyz";
+        }
+    </script>
+
+</body>
+
+</html>
